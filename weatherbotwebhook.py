@@ -32,7 +32,7 @@ def makeResponse(req):
   json_object = r.json()
   weather = json_object['list']
 
-  for i in range(0..30):
+  for i in range(0,30):
     if date in weather[i]['dt_txt']:
       condition = weather[i]['weathre'][0]['description']
       break
@@ -48,6 +48,6 @@ def makeResponse(req):
   }
 
   if __name__ == "__main__":
-    port = int(os.getenv('PORT', 5000)
+    port = int(os.getenv('PORT', 5000))
     print('Starting app on port %d' % (port))
     app.run(deubg=False, port=port, host='0.0.0.0')
